@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Removal App</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        /* Add your custom styles here */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 36px;
+            color: #333;
+        }
+        .description {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .description p {
+            font-size: 18px;
+            color: #777;
+        }
+        .form-container {
+            text-align: center;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .form-container form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .form-container .submit-button {
+            background-color: #007bff;
+            color: #fff;
+            font-size: 18px;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .form-container .submit-button:hover {
+            background-color: #0056b3;
+        }
+        .animation {
+            animation-name: pulse;
+            animation-duration: 1s;
+            animation-timing-function: ease-out;
+            animation-iteration-count: infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Data Removal App</h1>
+    </div>
+    <div class="description">
+        <p>Remove your data from our app easily. Just fill out the form below and click submit.</p>
+    </div>
+    <div class="form-container">
+        <form>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="reason">Reason for Data Removal</label>
+            <textarea id="reason" name="reason" rows="5" required></textarea>
+            <button type="submit" class="submit-button animation">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
